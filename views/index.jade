@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+  meta(charset="UTF-8")
+  title!=title
+body
+  h1!=message
+  ul
+    each book in books
+      li 
+        h3!= book.title
+        h4!= book.author

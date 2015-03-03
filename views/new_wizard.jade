@@ -1,0 +1,32 @@
+extends ./layout/application.jade
+
+block content
+  form(action="/wizard", method="post")
+    label(for="form_title") Sorcerer Name
+    input(type="text", name="sorcerer", id="form_title")
+    br
+    input#color_red(type="radio", name="color", value="red")
+    label(for="color_red") Red
+    br
+    input#color_green(type="radio", name="color", value="green")
+    label(for="color_green") Green
+    br
+    input#color_blue(type="radio", name="color", value="blue")
+    label(for="color_blue") Blue
+    hr
+    input(type="checkbox", name="is_evil")
+    label(for="is_evil") isEvil
+    br
+    input(type="checkbox", name="can_fly")
+    label(for="can_fly") Can fly
+    hr
+    label(for="description") Description
+    textarea#description(name="description")
+    hr
+    label(for="health") Health 
+    select#health(name="health")
+      option(value="0") 0
+      option(value="100") 100
+      option(value="2500") 2500      
+    br
+    button save

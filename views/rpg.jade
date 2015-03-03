@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    meta(charset="UTF-8")
+    title C4RPG
+body
+  header
+    h1#logo
+      a(href='#')
+        span C4RPG
+    nav
+      ul
+        each warrior in warriors
+          li
+            a!= warrior
+  main
+    block content
+      each book in books
+        article
+          h2.title!= book.title
+          h3.author!= book.author
